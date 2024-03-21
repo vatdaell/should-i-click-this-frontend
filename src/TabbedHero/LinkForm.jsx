@@ -1,27 +1,34 @@
 import React, { useState } from 'react';
 import { fetchLinkData } from '../utils/RestCalls';
-import { useLinkStatus } from "../LinkStatusContext/LinkStatusProvider";
 import LinkStatusMessage from './LinkStatusMessage'
 
 const LinkForm = () => {
-  const [link, setLink] = useState('')
-  const { updateLinkStatus } = useLinkStatus()
+  const [link, setLink] = useState("")
+  const [data, setData] = useState(null)
   const handleSubmit = async (event) => {
     event.preventDefault(); // Prevent the default form submit action
     try {
-      const escapedLink = encodeURIComponent(link)
-      const result = await fetchLinkData(escapedLink)
-      if(result){
-        const data = JSON.parse(result);
-        updateLinkStatus(data); 
+
+      if(link){
+        const escapedLink = encodeURIComponent(link)
+        const result = await fetchLinkData(escapedLink)
+        if(result){
+          const data = JSON.parse(result);
+          setData(data)
+          console.log(data)
+        }
       }
+      else if(!link){
+        setData(null)
+      }
+
     } catch (error) {
       console.error('Submit Error:', error)
     }
   }
   return (
       <div className="flex flex-col justify-center items-center bg-white p-4">
-      <LinkStatusMessage/>
+      <LinkStatusMessage data={data}/>
       <form className="w-full m-8" action="#" onSubmit={handleSubmit}>
         <div className="flex flex-col md:flex-row items-center border-2 border-gray-200 rounded-lg overflow-hidden">
           <input
