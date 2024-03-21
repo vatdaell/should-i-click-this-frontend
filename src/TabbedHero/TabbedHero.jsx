@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import LinkForm from './LinkForm';
 import DomainForm from './DomainForm';
+import LinkStatusMessage from './LinkStatusMessage';
 
 const TabbedHero = () => {
   const [activeTab, setActiveTab] = useState('linkVerifier');
