@@ -12,13 +12,14 @@ const LinkForm = () => {
       if(link){
         const escapedLink = encodeURIComponent(link)
         const result = await fetchLinkData(escapedLink)
+        
         if(result){
           const data = JSON.parse(result);
           setData(data)
           console.log(data)
         }
       }
-      else if(!link){
+      else{
         setData(null)
       }
 
@@ -28,19 +29,19 @@ const LinkForm = () => {
   }
   return (
       <div className="flex flex-col justify-center items-center bg-white p-4">
-      <LinkStatusMessage data={data}/>
+      <LinkStatusMessage className="w-full flex justify-start" data={data}/>
       <form className="w-full m-8" action="#" onSubmit={handleSubmit}>
-        <div className="flex flex-col md:flex-row items-center border-2 border-gray-200 rounded-lg overflow-hidden">
+        <div className="flex flex-row items-center space-x-2 items-center border-2 border-gray-200 rounded-lg overflow-hidden">
           <input
             value={link}
             onChange={(e) => setLink(e.target.value)}
-            className="flex-auto min-w-0 w-full px-4 py-2"
+            className="min-w-0 w-full px-4 py-2"
             id="link"
             placeholder="Link"
             aria-label="Link"
           />
           <button
-            className="w-auto bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline"
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline"
             type="submit"
           >
             Submit

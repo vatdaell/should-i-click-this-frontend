@@ -17,4 +17,15 @@ async function fetchLinkData(link) {
   }
 }
 
-export {fetchLinkData}
+
+async function fetchDomainData(domain) {
+  try {
+    const response = await fetch(`${import.meta.env.VITE_DOMAIN_API_URL}?domain=${domain}`, requestOptions);
+    const result = await response.text();
+    return result;
+  } catch (error) {
+    console.error('Error:', error);
+  }
+}
+
+export {fetchLinkData,fetchDomainData}

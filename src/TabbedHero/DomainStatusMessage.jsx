@@ -1,10 +1,10 @@
 import { UisExclamationOctagon, UisCheckCircle  } from '@iconscout/react-unicons-solid'
 
-const LinkStatusMessage = ({data}) => {
-  let message = "Please fill the link below to check the status of the link"
+const DomainStatusMessage = ({data}) => {
+  let message = "Please fill the domain below to check the status of the domain"
   let icon = <></>
   if(data && data != {}){
-    message = data.status ? import.meta.env.VITE_LINK_UNSAFE_MESSAGE : import.meta.env.VITE_LINK_SAFE_MESSAGE
+    message = data.status ? import.meta.env.VITE_DOMAIN_UNSAFE_MESSAGE : import.meta.env.VITE_DOMAIN_SAFE_MESSAGE
     icon = data.status ? <UisExclamationOctagon color="#FF0D0D"/> : <UisCheckCircle color="#198D19"/>
   }
   
@@ -14,4 +14,4 @@ const LinkStatusMessage = ({data}) => {
   </div>)
 }
 
-export default LinkStatusMessage
+export default DomainStatusMessage
