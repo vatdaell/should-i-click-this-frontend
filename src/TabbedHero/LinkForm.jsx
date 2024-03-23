@@ -16,7 +16,6 @@ const LinkForm = () => {
         if(result){
           const data = JSON.parse(result);
           setData(data)
-          console.log(data)
         }
       }
       else{
