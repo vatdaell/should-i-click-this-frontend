@@ -8,9 +8,13 @@ const DomainStatusMessage = ({data}) => {
     icon = data.status ? <UisExclamationOctagon color="#FF0D0D"/> : <UisCheckCircle color="#198D19"/>
   }
   
-  return (<div className="flex flex-nowrap">
-  {icon}
-  <h1>{message}</h1>
+  return (<div className="flex flex-col w-full text-left mb-2">
+  <h1 className="text-2xl font-bold">Instructions</h1>
+  <p>Paste the suspicious domain, include the domain, subdomaina and the tld only for example subdomain.domain.repl.co or domain.com. Do not include protocols such as http:// or https:// </p>
+  <div className='flex flex-wrap space-x-2'>
+    {icon}
+    <p>{message}</p>
+  </div>
   </div>)
 }
 

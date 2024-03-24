@@ -30,7 +30,7 @@ const DomainForm = () => {
     return (
     <div className="flex flex-col justify-center items-center bg-white p-4">
       <DomainStatusMessage className="w-full flex justify-start" data={data}/>
-      <form className="w-full m-8" action="#" onSubmit={handleSubmit}>
+      <form className="w-full m-8  mt-4" action="#" onSubmit={handleSubmit}>
         <div className="flex flex-row items-center items-center border-2 border-gray-200 rounded-lg overflow-hidden">
           <input
             value={domain}

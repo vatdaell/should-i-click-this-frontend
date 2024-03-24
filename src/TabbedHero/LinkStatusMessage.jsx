@@ -8,9 +8,13 @@ const LinkStatusMessage = ({data}) => {
     icon = data.status ? <UisExclamationOctagon color="#FF0D0D"/> : <UisCheckCircle color="#198D19"/>
   }
   
-  return (<div className="flex flex-nowrap">
-  {icon}
-  <h1>{message}</h1>
+  return (<div className="flex flex-col w-full text-left mb-2">
+  <h1 className="text-2xl font-bold">Instructions</h1>
+  <p>Paste the suspicious link, include everything like for example ftp://ipaddress/path/to/file.html or http://domain.tld/path/to/file.html</p>
+  <div className='flex flex-wrap space-x-2'>
+    {icon}
+    <p>{message}</p>
+  </div>
   </div>)
 }
 
