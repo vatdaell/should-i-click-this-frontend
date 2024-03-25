@@ -9,7 +9,7 @@ const Info = () =>
                 <h1 className="text-2xl font-bold ">Important Links</h1>
                 <a className="text-blue-400 hover:text-blue-700 active:text-blue-900" href="https://github.com/vatdaell/should-i-click-this-frontend">Frontend Github</a>
                 <a className="text-blue-400 hover:text-blue-700 active:text-blue-900" href="https://github.com/vatdaell/should-i-click-this">Backend Github</a>
-
+                <a className="text-blue-400 hover:text-blue-700 active:text-blue-900" href="https://github.com/mitchellkrogza/Phishing.Database/tree/master">Phishing.db</a>
             </div>
         </div>
     )
