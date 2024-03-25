@@ -22,10 +22,11 @@ const TabbedHero = () => {
             Domain Verifier
           </button>
         </div>
-        <div>
+        <div className='bg-white'>
           {activeTab === 'linkVerifier' && <LinkForm/>}
           {activeTab === 'domainVerifier' && <DomainForm/>}
         </div>
+       
       </div>
   );
 };

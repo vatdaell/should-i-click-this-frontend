@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
-import { fetchLinkData } from '../utils/RestCalls';
+import React, { useState } from 'react'
+import { fetchLinkData } from '../utils/RestCalls'
 import LinkStatusMessage from './LinkStatusMessage'
+import Info from './Info'
 
 const LinkForm = () => {
   const [link, setLink] = useState("")
   const [data, setData] = useState(null)
   const handleSubmit = async (event) => {
-    event.preventDefault(); // Prevent the default form submit action
+    event.preventDefault() // Prevent the default form submit action
     try {
 
       if(link){
@@ -14,7 +15,7 @@ const LinkForm = () => {
         const result = await fetchLinkData(escapedLink)
         
         if(result){
-          const data = JSON.parse(result);
+          const data = JSON.parse(result)
           setData(data)
         }
       }
@@ -27,7 +28,7 @@ const LinkForm = () => {
     }
   }
   return (
-      <div className="flex flex-col justify-center items-center bg-white p-4">
+      <div className="flex flex-col justify-center items-center p-4">
       <LinkStatusMessage  data={data}/>
       <form className="w-full m-8 mt-4" action="#" onSubmit={handleSubmit}>
         <div className="flex flex-row items-center items-center border-2 border-gray-200 rounded-lg overflow-hidden">
@@ -47,6 +48,7 @@ const LinkForm = () => {
           </button>
         </div>
       </form>
+      <Info/>
     </div>
     )
 }
