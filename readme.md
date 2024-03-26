@@ -47,8 +47,6 @@ VITE_DOMAIN_SAFE_MESSAGE="The domain is was not found in phishing.db" // Message
 VITE_DOMAIN_UNSAFE_MESSAGE="The domain was found in phishing.db, do not access the domain" // Message for unsafe domain 
 ```
 
-The VITE_AUTHORIZATION 
-
 ## Running the application
 
 To run the application, run the command below. The application defaults to http://localhost:5173/
