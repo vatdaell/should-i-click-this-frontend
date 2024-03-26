@@ -1,41 +1,47 @@
----
-title: Vite + React
-description: The default Vite + React starter, utilizing `Caddy` to serve the built app
-tags:
-  - node
-  - vite
-  - react
----
+# Should I click this? Frontend
 
-# Vite + React + Caddy
+## Requirements
 
-This is a [Vite + React](https://vitejs.dev/guide/#trying-vite-online) starter that uses [Caddy](https://caddyserver.com/).
+For development, you will only need Node.js installed on your environement.
 
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/NeiLty?referralCode=ySCnWl)
+### Node
 
-## ✨ Features
+[Node](https://nodejs.org "Node Installation") and [NPM](https://npmjs.org "NPM installation") are required to run this project. Verify the installation with the commands below.
 
-- Vite + React
-- [Caddy](https://caddyserver.com/)
+```
+$ node -v
+v20.11.1
 
-## 💁‍♀️ How to use
+$ npm -v
+10.2.4
+```
 
-- Install required dependencies with `npm install`
-- Start the server for local development `npm run dev`
+### Should I click this? Backend
 
-## ❓ Why use `Caddy` when deploying to Railway?
+For the frontend to make fetch requests. [Should I click this?](https://github.com/vatdaell/should-i-click-this "Should I click this setup?") backend should be setup and running 
 
-Caddy is a powerful, enterprise-ready, open source web server, and therefore Caddy is far better suited to serve websites than Vite is, using Caddy will result in much less memory and cpu usage compared to serving with Vite (much lower running costs too)
+## Installation
 
-To see how this is achieved with nixpacks, check out the fully documented nixpacks.toml file in this repository
+The application needs to be cloned and the npm dependencies to be installed like below.
 
-The configuration for Caddy is called a Caddyfile, and you can edit that file to further suite your needs, by default it comes configured to serve a single page app for React, and to also gzip the responses
+```
+$ git clone https://github.com/vatdaell/should-i-click-this-frontend.git
+$ cd should-i-click-this-frontend
+$ npm install
 
-**Relevant Caddy documentation:**
+```
 
-- [The Caddyfile](https://caddyserver.com/docs/caddyfile)
-- [Caddyfile Directives](https://caddyserver.com/docs/caddyfile/directives)
-- [root](https://caddyserver.com/docs/caddyfile/directives/root)
-- [encode](https://caddyserver.com/docs/caddyfile/directives/encode)
-- [file_server](https://caddyserver.com/docs/caddyfile/directives/file_server)
-- [try_files](https://caddyserver.com/docs/caddyfile/directives/try_files)
+## Running the Application
+
+To run the application, run the command below. The application defaults to http://localhost:5173/
+
+```
+$ npm run dev
+
+  VITE v4.5.2  ready in 542 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+  ➜  press h to show help
+
+```
