@@ -18,9 +18,11 @@ $ npm -v
 
 ### Should I click this? Backend
 
-For the frontend to make fetch requests. [Should I click this?](https://github.com/vatdaell/should-i-click-this "Should I click this setup?") backend should be setup and running 
+For the frontend to make fetch requests. [Should I click this?](https://github.com/vatdaell/should-i-click-this "Should I click this setup?") backend should be setup and running
 
-## Installation
+## Setup
+
+### Installation
 
 The application needs to be cloned and the npm dependencies to be installed like below.
 
@@ -31,7 +33,23 @@ $ npm install
 
 ```
 
-## Running the Application
+### Setting up environment variables
+
+To run the application, first create .env.local and populate the following environment variables for example
+
+```
+VITE_AUTHORIZATION="Basic dXNlcjpwYXNzd29yZA==" // The authorization headers required to call the backend api
+VITE_LINK_API_URL="http://localhost:8080/api/link" // The url to the backend api for fetching link verification
+VITE_DOMAIN_API_URL="http://localhost:8080/api/domain" // The url to the backend api for fetching domain verification
+VITE_LINK_SAFE_MESSAGE="The link is was not found in phishing.db" // Message for safe link 
+VITE_LINK_UNSAFE_MESSAGE="The link was found in phishing.db, do not access the link" // Message for unsafe link 
+VITE_DOMAIN_SAFE_MESSAGE="The domain is was not found in phishing.db" // Message for safe domain
+VITE_DOMAIN_UNSAFE_MESSAGE="The domain was found in phishing.db, do not access the domain" // Message for unsafe domain 
+```
+
+The VITE_AUTHORIZATION 
+
+## Running the application
 
 To run the application, run the command below. The application defaults to http://localhost:5173/
 
