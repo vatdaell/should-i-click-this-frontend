@@ -1,14 +1,26 @@
+import {createBrowserRouter, RouterProvider,} from "react-router-dom"
 import NavigationBar from "./NavigationBar/NavigationBar"
-import TabbedHero from "./TabbedHero/TabbedHero"
+import HomePage from "./HomePage/HomePage"
+
+
+const s = <><NavigationBar/><HomePage/></>
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element:  s,
+    errorElement: <div>Error</div>,
+  },
+  {
+    path: "/about",
+    element: <div>About</div>
+  }
+])
 
 
 function App() {
   return (
     <>
-      <NavigationBar/>
-      <div className="bg-gray-200 text-center py-6 h-screen">
-        <TabbedHero/>
-      </div>
+      <RouterProvider router={router}/>
     </>
   )
 }
