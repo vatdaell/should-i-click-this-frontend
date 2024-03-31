@@ -1,7 +1,6 @@
 import { UisExclamationOctagon, UisCheckCircle, UisExclamationTriangle } from '@iconscout/react-unicons-solid'
 
 const StatusMessage = ({ response }) => {
-    console.log(response)
     let message = "Please fill the domain below to check the status of the domain"
     let icon = <></>
 

@@ -27,7 +27,6 @@ const HomePage = () => {
             }
             
         } catch (error) {
-            //console.error(error) 
             setResponse({"error":true})
         }
       }
