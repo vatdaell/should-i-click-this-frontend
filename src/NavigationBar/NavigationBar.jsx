@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const NavigationBar = () => {
   return (
-    <nav className="bg-fuchsia-950 text-white py-4">
+    <nav className="bg-teal-950	 text-white py-4">
       <div className="container mx-auto px-4 flex flex-wrap items-center justify-between">
         <div className="flex items-center justify-start">
 

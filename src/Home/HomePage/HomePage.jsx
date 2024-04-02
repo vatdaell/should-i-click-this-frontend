@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import StatusMessage from './StatusMessage/StatusMessage'
-import { fetchData } from '../utils/RestCalls'
+import { fetchData } from '../../utils/RestCalls'
 
 const HomePage = () => {
     const [url, setUrl] = useState("")

@@ -1,5 +1,4 @@
 import { UisExclamationOctagon, UisCheckCircle, UisExclamationTriangle } from '@iconscout/react-unicons-solid'
-import { useTheme } from '../../ThemeContext/ThemeContext';
 
 const StatusMessage = ({ response }) => {
     let message = "Please fill the domain below to check the status of the domain"
@@ -15,7 +14,6 @@ const StatusMessage = ({ response }) => {
             icon = response.status ? <UisExclamationOctagon className="mb-4" color="#FF0D0D"/> : <UisCheckCircle className="mb-4" color="#198D19"/>
         }
     }
-
 
     return (
         <div className="flex items-center space-x-2 mx-1">
