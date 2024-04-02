@@ -1,9 +1,10 @@
 import { UisExclamationOctagon, UisCheckCircle, UisExclamationTriangle } from '@iconscout/react-unicons-solid'
+import { useTheme } from '../../ThemeContext/ThemeContext';
 
 const StatusMessage = ({ response }) => {
     let message = "Please fill the domain below to check the status of the domain"
     let icon = <></>
-
+    
     if(response){
         if(response.error) {
             icon = <UisExclamationTriangle color="#FFE900"/>
@@ -11,15 +12,17 @@ const StatusMessage = ({ response }) => {
         }
         else {
             message = response.status ? `${import.meta.env.VITE_URL_UNSAFE_MESSAGE}` :`${import.meta.env.VITE_URL_SAFE_MESSAGE}`
-            icon = response.status ? <UisExclamationOctagon color="#FF0D0D"/> : <UisCheckCircle color="#198D19"/>
+            icon = response.status ? <UisExclamationOctagon className="mb-4" color="#FF0D0D"/> : <UisCheckCircle className="mb-4" color="#198D19"/>
         }
     }
 
 
     return (
-        <div className='flex flex-wrap space-x-2 mx-2'>
-            {icon}
-            <p className="text-left mb-4">{message}</p>
+        <div className="flex items-center space-x-2 mx-1">
+        {icon}
+        <p className="text-black dark:text-white text-left mb-4 flex-1">
+            {message}
+        </p>
         </div>
     )
 }
