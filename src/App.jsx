@@ -1,10 +1,8 @@
 import {createBrowserRouter, RouterProvider,} from "react-router-dom"
-import NavigationBar from "./NavigationBar/NavigationBar"
-import AboutPage from "./AboutPage/AboutPage"
 import { useTheme } from "./ThemeContext/ThemeContext"
 import { useEffect } from "react"
 import Home from "./Home/Home"
-
+import About from "./About/About"
 
 
 const router = createBrowserRouter([
@@ -15,7 +13,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/about",
-    element: <><NavigationBar/><AboutPage/></>
+    element: <About/>
   }
 ])
 
