@@ -19,7 +19,7 @@ const router = createBrowserRouter([
 
 
 const App = () => {
-  const { theme } = useTheme();
+  const { theme } = useTheme()
 
   useEffect(() => {
     if(theme === "dark"){
@@ -31,8 +31,14 @@ const App = () => {
     }
   }, [theme])
 
+
+  
+
+
   return (
+    <>
       <RouterProvider router={router}/>
+    </>
   )
 }
 
