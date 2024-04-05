@@ -65,4 +65,4 @@ $ npm run dev
 ## Release Notes
 
 * Version 2.0.0
-* [Version 1.0.0](other_file.md)
+* [Version 1.0.0](Release%20Notes/Version-1.0.0.md)
