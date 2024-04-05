@@ -39,12 +39,12 @@ To run the application, first create .env.local and populate the following envir
 
 ```
 VITE_AUTHORIZATION="Basic dXNlcjpwYXNzd29yZA==" // The authorization headers required to call the backend api
-VITE_LINK_API_URL="http://localhost:8080/api/link" // The url to the backend api for fetching link verification
-VITE_DOMAIN_API_URL="http://localhost:8080/api/domain" // The url to the backend api for fetching domain verification
-VITE_LINK_SAFE_MESSAGE="The link is was not found in phishing.db" // Message for safe link 
-VITE_LINK_UNSAFE_MESSAGE="The link was found in phishing.db, do not access the link" // Message for unsafe link 
-VITE_DOMAIN_SAFE_MESSAGE="The domain is was not found in phishing.db" // Message for safe domain
-VITE_DOMAIN_UNSAFE_MESSAGE="The domain was found in phishing.db, do not access the domain" // Message for unsafe domain 
+VITE_API_URL="http://localhost:8080/api/consolidated" // The url to the backend api for fetching url verification
+VITE_URL_SAFE_MESSAGE="The URL was not found in our data sources" // Message for safe url
+VITE_URL_UNSAFE_MESSAGE="The URL was found in our data sources, do not access the url" // Message for unsafe url
+VITE_URL_ERROR_MESSAGE="There was an issue verifying the url, please try again later" // Message when there is an issue accessing the backend
+VITE_GA_ID=YOUR_GOOGLE_ANALYTICS // Add google analytics key
+
 ```
 
 ## Running the application
@@ -61,3 +61,8 @@ $ npm run dev
   ➜  press h to show help
 
 ```
+
+## Release Notes
+
+* Version 2.0.0
+* [Version 1.0.0](other_file.md)
