@@ -44,6 +44,7 @@
 ### New Features
 
 * Consolidated Phishing.db link and domain and Open Phish data feed into one search bar
+* Added Dark Mode
 * GDPR consent for analytics tracking
 
 ### Other Changes
