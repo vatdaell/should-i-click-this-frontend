@@ -43,7 +43,7 @@ VITE_API_URL="http://localhost:8080/api/consolidated" // The url to the backend 
 VITE_URL_SAFE_MESSAGE="The URL was not found in our data sources" // Message for safe url
 VITE_URL_UNSAFE_MESSAGE="The URL was found in our data sources, do not access the url" // Message for unsafe url
 VITE_URL_ERROR_MESSAGE="There was an issue verifying the url, please try again later" // Message when there is an issue accessing the backend
-VITE_GA_ID=YOUR_GOOGLE_ANALYTICS // Add google analytics key
+VITE_GA_ID=YOUR_GOOGLE_ANALYTICS="GA-XXXXX" // Add google analytics key
 
 ```
 
@@ -64,5 +64,5 @@ $ npm run dev
 
 ## Release Notes
 
-* Version 2.0.0
+* [Version 2.0.0](Release%20Notes/Version-2.0.0.md)
 * [Version 1.0.0](Release%20Notes/Version-1.0.0.md)
