@@ -1,14 +1,43 @@
-import NavigationBar from "./NavigationBar/NavigationBar"
-import TabbedHero from "./TabbedHero/TabbedHero"
+import {createBrowserRouter, RouterProvider,} from "react-router-dom"
+import { useTheme } from "./ThemeContext/ThemeContext"
+import { useEffect } from "react"
+import Home from "./Home/Home"
+import About from "./About/About"
 
 
-function App() {
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element:  <Home/>,
+    errorElement: <div>Error</div>,
+  },
+  {
+    path: "/about",
+    element: <About/>
+  }
+])
+
+
+const App = () => {
+  const { theme } = useTheme()
+
+  useEffect(() => {
+    if(theme === "dark"){
+      document.documentElement.classList.add("dark")
+    }
+    else{
+      document.documentElement.classList.remove("dark")
+
+    }
+  }, [theme])
+
+
+  
+
+
   return (
     <>
-      <NavigationBar/>
-      <div className="bg-gray-200 text-center py-6 h-screen">
-        <TabbedHero/>
-      </div>
+      <RouterProvider router={router}/>
     </>
   )
 }
