@@ -1,4 +1,4 @@
-## 2.0.0 (2024-04-07)
+## 2.0.0 (2024-04-08)
 
 > Version 2.0.0 of "Should I Click This?" marks a transformative update, integrating both Phishing.db and Open Phish data into a unified search functionality for streamlined URL safety verification. This version simplifies the environmental configuration by consolidating variables for enhanced clarity and introduces new features including Dark Mode and GDPR consent for analytics. Additionally, version 2.0.0 debuts a refreshed visual identity with a new logo and color palette, and improves site navigation by introducing a dedicated about page.
 
