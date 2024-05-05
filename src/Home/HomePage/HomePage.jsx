@@ -40,7 +40,7 @@ const HomePage = () => {
                         <input
                             type="text"
                             className="flex-grow border border-gray-300 p-2 rounded-l-lg focus:outline-none text-black"
-                            placeholder="Url"
+                            placeholder="IP/URL/Domain"
                             onChange={handleInput}
                         />
                         <button
